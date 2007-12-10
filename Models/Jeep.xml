@@ -42,7 +42,7 @@
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.25</dep>
+    <dep>0.2</dep>
    </entry>
   </interpolation>
   <axis>
@@ -63,7 +63,7 @@
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.25</dep>
+    <dep>0.2</dep>
    </entry>
   </interpolation>
   <axis>
@@ -84,7 +84,7 @@
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.25</dep>
+    <dep>0.2</dep>
    </entry>
   </interpolation>
   <axis>
@@ -105,7 +105,7 @@
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.25</dep>
+    <dep>0.2</dep>
    </entry>
   </interpolation>
   <axis>
@@ -260,6 +260,7 @@
     <model> 
       <path>Aircraft/jeep/Models/pilot.xml</path>
 	  <name>pilot</name>
+		<nopreview/>
       <offsets> 
         <x-m>2.1</x-m>
         <y-m>-0.32</y-m>
@@ -291,6 +292,7 @@
 	<model> 
       <path>Aircraft/jeep/Models/roof.ac</path>
 			<name>softroof</name>
+		<nopreview/>
       <offsets> 
         <x-m>0.0</x-m>
         <y-m>0.0</y-m>
