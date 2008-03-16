@@ -34,6 +34,7 @@
   <type>translate</type>
   <object-name>fwheel.L</object-name>
   <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
   <property>gear/gear[0]/compression-norm</property>
   <interpolation>
    <entry>
@@ -55,6 +56,7 @@
   <type>translate</type>
   <object-name>fwheel.R</object-name>
   <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
    <entry>
@@ -76,6 +78,7 @@
   <type>translate</type>
   <object-name>rwheel.L</object-name>
   <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
    <entry>
@@ -97,6 +100,7 @@
   <type>translate</type>
   <object-name>rwheel.R</object-name>
   <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
   <property>gear/gear[3]/compression-norm</property>
   <interpolation>
    <entry>
@@ -118,6 +122,7 @@
   <type>rotate</type>
   <object-name>fwheel.L</object-name>
   <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
   <property>controls/flight/aileron</property>
   <factor>-25</factor>
   <center>
@@ -135,6 +140,7 @@
   <type>rotate</type>
   <object-name>fwheel.R</object-name>
   <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
   <property>controls/flight/aileron</property>
   <factor>-25</factor>
   <center>
@@ -153,8 +159,9 @@
   <type>spin</type>
   <object-name>fwheel.L</object-name>
   <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
   <property>gear/gear[1]/rollspeed-ms</property>
-  <factor>-5</factor>
+  <factor>-15</factor>
   <center>
    <x-m>0.554</x-m>
    <y-m>-0.439</y-m>
@@ -170,8 +177,9 @@
   <type>spin</type>
   <object-name>fwheel.R</object-name>
   <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
   <property>gear/gear[1]/rollspeed-ms</property>
-  <factor>-5</factor>
+  <factor>-15</factor>
   <center>
    <x-m>0.554</x-m>
    <y-m>0.439</y-m>
@@ -187,8 +195,9 @@
   <type>spin</type>
   <object-name>rwheel.L</object-name>
   <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
   <property>gear/gear[2]/rollspeed-ms</property>
-  <factor>-5</factor>
+  <factor>-15</factor>
   <center>
    <x-m>2.696</x-m>
    <y-m>-0.746</y-m>
@@ -204,8 +213,9 @@
   <type>spin</type>
   <object-name>rwheel.R</object-name>
   <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
   <property>gear/gear[3]/rollspeed-ms</property>
-  <factor>-5</factor>
+  <factor>-15</factor>
   <center>
    <x-m>2.696</x-m>
    <y-m>-0.746</y-m>
