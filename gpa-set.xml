@@ -5,11 +5,11 @@
 
  <sim>
 
-  <description>Willys Jeep</description>
+  <description> GPA amphibious Jeep</description>
   <author>Detlef Faber</author>
   <status>alpha</status>
   <flight-model>yasim</flight-model>
-  <aero>jeep-yasim</aero>
+  <aero>gpa-yasim</aero>
 
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
@@ -20,7 +20,7 @@
   </sound>
 
   <model>
-   <path>Aircraft/jeep/Models/Jeep.xml</path>
+   <path>Aircraft/jeep/Models/GPA.xml</path>
    <crew>
      <pilot>
        <visible type="int">1</visible>
@@ -147,10 +147,10 @@
 						</binding>
 					</item>
 					<item>
-						<label>put Softroof on</label>
+						<label>put Splashshield on</label>
 						<binding>
           <command>property-toggle</command>
-          <property>/controls/gear/roof</property>
+          <property>/controls/gear/shield</property>
 						</binding>
 					</item>
 			</menu>
