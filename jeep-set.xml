@@ -153,6 +153,13 @@
           <property>/controls/gear/roof</property>
 						</binding>
 					</item>
+					<item>
+						<label>Select Livery</label>
+              <binding>
+                <command>nasal</command>
+                <script>aircraft.livery.dialog.toggle()</script>
+              </binding>
+					</item>
 			</menu>
 		</default>
 	</menubar>
@@ -227,6 +234,9 @@
 	</keyboard>
 </input>
  <nasal>
+		<jeep>
+			<file>Aircraft/jeep/Nasal/jeep.nas</file>
+		</jeep>
    <walk>
      <file>Aircraft/jeep/Nasal/walk.nas</file>
      <script>main_loop();</script>

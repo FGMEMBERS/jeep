@@ -327,5 +327,33 @@
         <z-m>0.0</z-m>
       </offsets>
     </model>
+
+  <animation>
+    <type>material</type>
+    <object-name>chassis</object-name>
+    <object-name>chassis.001</object-name>
+    <object-name>Cylinder.001</object-name>
+    <object-name>canister</object-name>
+    <object-name>fwheel.L</object-name>
+    <object-name>fwheel.R</object-name>
+    <object-name>rwheel.L</object-name>
+    <object-name>rwheel.R</object-name>
+    <object-name>sparewheel</object-name>
+    <object-name>steerwheel</object-name>
+    <object-name>Circle.007</object-name>
+    <object-name>Circle.008</object-name>
+    <object-name>screen</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>jeep-1.png</texture>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>roof</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture-roof</texture-prop>
+    <texture>softroof.png</texture>
+  </animation>
+
 </PropertyList>
  
