@@ -1,1 +1,1 @@
-aircraft.livery.init("Aircraft/jeep/Models/Liveries");
+aircraft.livery.init("Aircraft/jeep/Models/Liveries", "sim/model/livery/name");

@@ -2,6 +2,9 @@
 
 
 <PropertyList>
+<combat>true</combat>
+<hitcount>0</hitcount>
+<size>5</size>
 
  <sim>
 
@@ -26,6 +29,12 @@
        <visible type="int">1</visible>
      </pilot>
    </crew>
+		<livery>
+     <file/>
+		 <name/>
+		 <texture/>
+		 <texture-roof/>
+		</livery>
   </model> 
 	<walker>
 		<outside type="bool">false</outside>
@@ -163,6 +172,13 @@
 			</menu>
 		</default>
 	</menubar>
+	<multiplay>
+		<generic>
+				<float>0</float>
+				<string>0</string>
+				<string n="1">0</string>
+		</generic>
+	</multiplay>
  </sim>
 
  <engines>
@@ -192,6 +208,7 @@
             <value type="double">0.0</value>
           </binding>
         </key>
+
         <key n="109"> 
           <name>m</name>
           <desc>disengage Reverse</desc>
@@ -241,6 +258,9 @@
      <file>Aircraft/jeep/Nasal/walk.nas</file>
      <script>main_loop();</script>
    </walk>
+		<failure>
+			<file>Aircraft/jeep/Nasal/failure.nas</file>
+		</failure>
  </nasal>
 </PropertyList>
 

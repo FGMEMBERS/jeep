@@ -1,8 +1,23 @@
 <PropertyList>
  <path>jeep.ac</path>
+
 	<offsets>
-		<z-m>-0.1</z-m>
+		<z-m>-0.03</z-m>
 	</offsets>
+
+  <nasal>
+    <load>
+      var update = aircraft.overlay_update.new();
+      update.add("Aircraft/jeep/Models/AI-Liveries", "sim/model/livery/file");
+
+    </load>
+    <unload>
+			print ("bye");
+			loopid += 1;
+    </unload>
+  </nasal>
+
+
 <!-- instruments -->
 	<model> 
       <path>Aircraft/jeep/Models/fuelgauge.xml</path>
@@ -29,17 +44,27 @@
       </offsets>
     </model>
 
-
+<!-- Front Axle -->
  <animation>
   <type>translate</type>
   <object-name>fwheel.L</object-name>
   <object-name>fwheel2.L</object-name>
   <object-name>fscrews.L</object-name>
+  <object-name>fwheel.R</object-name>
+  <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <object-name>frontaxle</object-name>
   <property>gear/gear[0]/compression-norm</property>
+    <condition>
+        <greater-than-equals>
+          <property>gear/gear[1]/compression-norm</property>
+          <property>gear/gear[0]/compression-norm</property>
+        </greater-than-equals>
+    </condition>
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>0</dep>
+    <dep>-0.05</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -54,14 +79,176 @@
  </animation>
  <animation>
   <type>translate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
   <object-name>fwheel.R</object-name>
   <object-name>fwheel2.R</object-name>
   <object-name>fscrews.R</object-name>
+  <object-name>frontaxle</object-name>
   <property>gear/gear[1]/compression-norm</property>
+    <condition>
+        <greater-than>
+          <property>gear/gear[0]/compression-norm</property>
+          <property>gear/gear[1]/compression-norm</property>
+        </greater-than>
+    </condition>
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>0</dep>
+    <dep>-0.05</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>0.2</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
+  <object-name>fwheel.R</object-name>
+  <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <object-name>frontaxle</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+  <factor>11.5</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
+  <object-name>fwheel.R</object-name>
+  <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <object-name>frontaxle</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <factor>11.5</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>-0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.R</object-name>
+  <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>spin</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>fwheel2.L</object-name>
+  <object-name>fscrews.L</object-name>
+  <property>gear/gear[1]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>-0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>spin</type>
+  <object-name>fwheel.R</object-name>
+  <object-name>fwheel2.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <property>gear/gear[1]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+<!-- Rear Axle  -->
+ <animation>
+  <type>translate</type>
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+  <object-name>rearaxle</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+    <condition>
+        <greater-than-equals>
+          <property>gear/gear[3]/compression-norm</property>
+          <property>gear/gear[2]/compression-norm</property>
+        </greater-than-equals>
+    </condition>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-0.05</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -79,33 +266,21 @@
   <object-name>rwheel.L</object-name>
   <object-name>rwheel2.L</object-name>
   <object-name>rscrews.L</object-name>
-  <property>gear/gear[2]/compression-norm</property>
-  <interpolation>
-   <entry>
-    <ind>0.0</ind>
-    <dep>0</dep>
-   </entry>
-   <entry>
-    <ind>1.00</ind>
-    <dep>0.2</dep>
-   </entry>
-  </interpolation>
-  <axis>
-   <x>0</x>
-   <y>0</y>
-   <z>1</z>
-  </axis>
- </animation>
- <animation>
-  <type>translate</type>
   <object-name>rwheel.R</object-name>
   <object-name>rwheel2.R</object-name>
   <object-name>rscrews.R</object-name>
+  <object-name>rearaxle</object-name>
   <property>gear/gear[3]/compression-norm</property>
+    <condition>
+        <greater-than>
+          <property>gear/gear[2]/compression-norm</property>
+          <property>gear/gear[3]/compression-norm</property>
+        </greater-than>
+    </condition>
   <interpolation>
    <entry>
     <ind>0.0</ind>
-    <dep>0</dep>
+    <dep>-0.05</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
@@ -116,81 +291,55 @@
    <x>0</x>
    <y>0</y>
    <z>1</z>
-  </axis>
- </animation>
- <animation>
-  <type>rotate</type>
-  <object-name>fwheel.L</object-name>
-  <object-name>fwheel2.L</object-name>
-  <object-name>fscrews.L</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-25</factor>
-  <center>
-   <x-m>0.554</x-m>
-   <y-m>-0.439</y-m>
-   <z-m>0.408</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>0.0</y>
-   <z>1.0</z>
-  </axis>
- </animation>
- <animation>
-  <type>rotate</type>
-  <object-name>fwheel.R</object-name>
-  <object-name>fwheel2.R</object-name>
-  <object-name>fscrews.R</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-25</factor>
-  <center>
-   <x-m>0.554</x-m>
-   <y-m>0.439</y-m>
-   <z-m>0.408</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>0.0</y>
-   <z>1.0</z>
   </axis>
  </animation>
 
  <animation>
-  <type>spin</type>
-  <object-name>fwheel.L</object-name>
-  <object-name>fwheel2.L</object-name>
-  <object-name>fscrews.L</object-name>
-  <property>gear/gear[1]/rollspeed-ms</property>
-  <factor>-15</factor>
+  <type>rotate</type>
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+  <object-name>rearaxle</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>11.5</factor>
   <center>
-   <x-m>0.554</x-m>
-   <y-m>-0.439</y-m>
+   <x-m>2.696</x-m>
+   <y-m>0.0</y-m>
    <z-m>0.408</z-m>
   </center>
   <axis>
-   <x>0.0</x>
-   <y>1.0</y>
+   <x>-1.0</x>
+   <y>0.0</y>
    <z>0.0</z>
   </axis>
  </animation>
+
  <animation>
-  <type>spin</type>
-  <object-name>fwheel.R</object-name>
-  <object-name>fwheel2.R</object-name>
-  <object-name>fscrews.R</object-name>
-  <property>gear/gear[1]/rollspeed-ms</property>
-  <factor>-15</factor>
+  <type>rotate</type>
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+  <object-name>rearaxle</object-name>
+  <property>gear/gear[3]/compression-norm</property>
+  <factor>11.5</factor>
   <center>
-   <x-m>0.554</x-m>
-   <y-m>0.439</y-m>
+   <x-m>2.696</x-m>
+   <y-m>0.0</y-m>
    <z-m>0.408</z-m>
   </center>
   <axis>
-   <x>0.0</x>
-   <y>1.0</y>
+   <x>1.0</x>
+   <y>0.0</y>
    <z>0.0</z>
   </axis>
  </animation>
+
  <animation>
   <type>spin</type>
   <object-name>rwheel.L</object-name>
@@ -227,6 +376,10 @@
    <z>0.0</z>
   </axis>
  </animation>
+
+
+
+
  <animation>
   <type>rotate</type>
   <object-name>steerwheel</object-name>
@@ -250,9 +403,10 @@
  <animation>
   <type>rotate</type>
   <object-name>screen</object-name>
+  <object-name>screenglass</object-name>
   <object-name>wiper.L</object-name>
   <object-name>wiper.R</object-name>
-  <property>controls/gear//screen</property>
+  <property>controls/gear/screen</property>
   <factor>-108</factor>
   <center>
    <x-m>1.167</x-m>
@@ -265,7 +419,6 @@
    <z>0.0</z>
   </axis>
  </animation>
-
 
     <model> 
       <path>Aircraft/jeep/Models/pilot.xml</path>
@@ -319,21 +472,14 @@
    </equals>
   </condition>
  </animation>
-	<model> 
-      <path>Aircraft/jeep/Models/transparent.xml</path>
-      <offsets> 
-        <x-m>0.0</x-m>
-        <y-m>0.0</y-m>
-        <z-m>0.0</z-m>
-      </offsets>
-    </model>
+
 
   <animation>
     <type>material</type>
     <object-name>chassis</object-name>
     <object-name>chassis.001</object-name>
     <object-name>Cylinder.001</object-name>
-    <object-name>canister</object-name>
+    <object-name>canister.RL</object-name>
     <object-name>fwheel.L</object-name>
     <object-name>fwheel.R</object-name>
     <object-name>rwheel.L</object-name>
@@ -342,6 +488,7 @@
     <object-name>steerwheel</object-name>
     <object-name>Circle.007</object-name>
     <object-name>Circle.008</object-name>
+    <object-name>frontbumper</object-name>
     <object-name>screen</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -354,6 +501,40 @@
     <texture-prop>texture-roof</texture-prop>
     <texture>softroof.png</texture>
   </animation>
+<!-- Select Animations for different Variants -->
+
+ <animation>
+  <type>select</type>
+  <object-name>canister.HL</object-name>
+  <object-name>canister.HR</object-name>
+  <object-name>sparewheel.F</object-name>
+  <object-name>canister.M</object-name>
+  <object-name>canister.L</object-name>
+  <object-name>canister.R</object-name>
+  <condition>
+   <equals>
+    <property>sim/model/livery/name</property>
+    <value>Brit. Airborn Jeep</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>screen</object-name>
+  <object-name>screenglass</object-name>
+  <object-name>wiper.L</object-name>
+  <object-name>wiper.R</object-name>
+  <object-name>canister.RL</object-name>
+  <object-name>sparewheel</object-name>
+  <object-name>sparewheel2</object-name>
+  <object-name>rscrews.L.001</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/name</property>
+    <value>Brit. Airborn Jeep</value>
+   </not-equals>
+  </condition>
+ </animation>
 
 </PropertyList>
  
