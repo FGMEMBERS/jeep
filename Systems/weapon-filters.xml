@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <filter>
+    <name>Browning heading</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>sim/current-view/heading-offset-deg</input>
+    <output>sim/armament/browning/heading</output>
+    <gain>
+      <value>-1</value>
+    </gain>
+
+    <enable>
+      <condition>
+        <equals>
+          <property>sim/current-view/view-number</property>
+          <value>8</value>
+        </equals>
+      </condition>
+    </enable>
+
+  </filter>
+
+
+  <filter>
+    <name>Browning Elevation</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>sim/current-view/pitch-offset-deg</input>
+    <output>sim/armament/browning/elevation</output>
+    <gain>
+      <value>-1</value>
+    </gain>
+
+    <enable>
+      <condition>
+        <equals>
+          <property>sim/current-view/view-number</property>
+          <value>8</value>
+        </equals>
+      </condition>
+    </enable>
+
+  </filter>
+</PropertyList>
