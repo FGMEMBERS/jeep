@@ -8,9 +8,10 @@
     <nopreview/>
 
     <offsets> 
-      <x-m>2.249</x-m>
-      <y-m>0.0</y-m>
-      <z-m>1.9</z-m>
+      <x-m>1.2</x-m>
+      <y-m>0.5</y-m>
+      <z-m>1.4</z-m>
+      <heading-deg>180</heading-deg>
     </offsets>
   </model>
 

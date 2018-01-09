@@ -5,6 +5,9 @@
     <view n="100">
       <enabled type="bool">false</enabled>
     </view>
+    <view n="101">
+      <enabled type="bool">false</enabled>
+    </view>
     <model>
       <livery>
         <name type="string">US Navy blue</name>

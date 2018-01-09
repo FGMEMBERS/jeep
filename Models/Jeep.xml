@@ -902,37 +902,12 @@
   </condition>
  </animation>
 
-<!--
- <animation>
-  <type>select</type>
-  <object-name>screen</object-name>
-  <object-name>headlights</object-name>
-  <object-name>screen.1</object-name>
-  <object-name>mirror</object-name>
-  <object-name>mirrorarm</object-name>
-  <object-name>mirrorglass</object-name>
-  <object-name>wipermotor.R</object-name>
-  <object-name>wipermotor.L</object-name>
-  <object-name>screenadjust1</object-name>
-  <object-name>screenadjust2</object-name>
-  <object-name>screenadjust3</object-name>
-  <object-name>screenglass</object-name>
-  <object-name>wiper.L</object-name>
-  <object-name>wiper.R</object-name>
-  <object-name>canister.RL</object-name>
-  <object-name>sparewheel</object-name>
-  <object-name>sparewheel2</object-name>
-  <object-name>rscrews.L.001</object-name>
-    <object-name>holes</object-name>
-  <condition>
-   <not-equals>
-    <property>sim/model/livery/name</property>
-    <value>Brit. Airborn Jeep</value>
-   </not-equals>
-  </condition>
- </animation>
--->
 
+<!-- Testing -->
+  <model> 
+    <path>Aircraft/jeep/Models/trailer.xml</path>
+    <name>Trailer</name>
+  </model>
 
 </PropertyList>
  
