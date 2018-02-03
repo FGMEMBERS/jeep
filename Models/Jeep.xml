@@ -903,11 +903,5 @@
  </animation>
 
 
-<!-- Testing -->
-  <model> 
-    <path>Aircraft/jeep/Models/trailer.xml</path>
-    <name>Trailer</name>
-  </model>
-
 </PropertyList>
  
